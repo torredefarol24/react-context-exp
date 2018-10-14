@@ -1,0 +1,46 @@
+import React, { Component } from 'react';
+import './App.css';
+import NumberContext from './context/numberContext'
+
+function Counter(props){
+  // return(<h1>From App.js State: {props.value}</h1>)
+  return (<NumberContext.Consumer>
+    {value => <h1>Using Context: {value}</h1>}
+  </NumberContext.Consumer>)
+}
+
+class App extends Component {
+  state = {
+    number : 0
+  }
+
+  onIncHandler = () => {
+    this.setState({
+      number : this.state.number + 1
+    })
+  }
+
+  onDecHandler = () => {
+    this.setState({
+      number : this.state.number -1 
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h3>Wow</h3>
+        {/* <Counter value={this.state.number} /> */}
+
+        <NumberContext.Provider value={this.state.number}>
+          <Counter />
+        </NumberContext.Provider>
+
+        <button onClick={this.onIncHandler}> Increase</button>
+        <button onClick={this.onDecHandler}>Decrease</button>
+      </div>
+    );
+  }
+}
+
+export default App;

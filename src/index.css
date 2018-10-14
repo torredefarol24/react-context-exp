@@ -12,3 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.mt48{
+  margin-top: 48px
+}
+
+.ml32{
+  margin-left: 32px
+}
+
+.mr32{
+  margin-right: 32px
+}
