@@ -2,6 +2,9 @@
   "name": "context_tryout",
   "version": "0.1.0",
   "private": true,
+  "author": "Toufiq (https://twitter.com/burningraven06)",
+  "description" : "RReact Context API Tryout ",
+  "keywords" : ["react","reactjs","context","react-context","react-context-api","context-api","react-16 "],
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
